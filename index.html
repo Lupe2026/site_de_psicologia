@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início | Solange de Deus - Psicóloga Clínica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        serene: {
+                            50: '#f4f7f6',
+                            100: '#e3ebe8',
+                            200: '#c7d7d3',
+                            300: '#a3beba',
+                            400: '#7ba19d',
+                            500: '#5a8581',
+                            600: '#466b68',
+                            700: '#3a5856',
+                            800: '#324847',
+                            900: '#2b3d3c',
+                        },
+                        warm: {
+                            50: '#fdfbf7',
+                            100: '#f7f2ea',
+                            200: '#eee3d3',
+                            300: '#e3d1ba',
+                            400: '#d5bb9d',
+                            500: '#c5a380',
+                            600: '#b48c6a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                        cursive: ['"Alex Brush"', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #f4f7f6 0%, #f7f2ea 50%, #e3ebe8 100%);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-700 bg-slate-50 antialiased selection:bg-serene-200 selection:text-serene-900">
+
+    <!-- Topbar -->
+    <div class="bg-serene-800 text-serene-100 py-2 text-xs md:text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center flex-wrap gap-2">
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-serene-300"></i> Atendimento Presencial & Online</span>
+                <span class="hidden sm:flex items-center gap-2"><i class="fa-solid fa-user-shield text-serene-300"></i> CRP 05/84980</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="https://wa.me/5521982771542" target="_blank" rel="noopener noreferrer" class="hover:text-amber-200 transition flex items-center gap-1">
+                    <i class="fa-brands fa-whatsapp text-emerald-400"></i> (21) 98277-1542
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-serene-100 transition-all duration-300 shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex flex-col group">
+                    <span class="font-serif text-xl sm:text-2xl font-semibold text-serene-900 tracking-tight group-hover:text-serene-600 transition">
+                        Solange de Deus Mauricio Pereira
+                    </span>
+                    <span class="text-xs uppercase tracking-widest text-serene-500 font-medium">
+                        Psicóloga Clínica
+                    </span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="index.html" class="text-serene-600 font-semibold border-b-2 border-serene-600 pb-1">Início</a>
+                    <a href="sobre.html" class="text-gray-600 hover:text-serene-600 transition">Sobre Mim</a>
+                    <a href="especialidades.html" class="text-gray-600 hover:text-serene-600 transition">Especialidades</a>
+                    <a href="como-funciona.html" class="text-gray-600 hover:text-serene-600 transition">Como Funciona</a>
+                    <a href="faq.html" class="text-gray-600 hover:text-serene-600 transition">FAQ</a>
+                    <a href="agendamento.html" class="bg-serene-600 text-white px-5 py-2.5 rounded-full hover:bg-serene-700 transition shadow-md hover:shadow-lg flex items-center gap-2">
+                        <i class="fa-regular fa-calendar-check"></i> Agendar Consulta
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none p-2 rounded-lg hover:bg-serene-50" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-serene-100 px-4 pt-2 pb-6 space-y-3">
+            <a href="index.html" class="block py-2 text-serene-600 font-semibold border-b border-gray-50">Início</a>
+            <a href="sobre.html" class="block py-2 text-gray-700 hover:text-serene-600 border-b border-gray-50">Sobre Mim</a>
+            <a href="especialidades.html" class="block py-2 text-gray-700 hover:text-serene-600 border-b border-gray-50">Especialidades</a>
+            <a href="como-funciona.html" class="block py-2 text-gray-700 hover:text-serene-600 border-b border-gray-50">Como Funciona</a>
+            <a href="faq.html" class="block py-2 text-gray-700 hover:text-serene-600 border-b border-gray-50">FAQ</a>
+            <a href="agendamento.html" class="block mt-4 text-center bg-serene-600 text-white py-3 rounded-xl font-medium shadow">Agendar Consulta</a>
+        </div>
+    </header>
+
+    <!-- Section 1: Hero Principal (com foto aeps_sol.jpeg e citação abaixo) -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 gradient-bg overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Coluna Texto Principal -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-serene-100 text-serene-800 px-4 py-1.5 rounded-full text-xs md:text-sm font-medium border border-serene-200">
+                        <i class="fa-solid fa-heart text-serene-500"></i> Atendimento Humanizado & Especializado
+                    </div>
+                    
+                    <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-serene-900 leading-tight font-semibold">
+                        Um espaço seguro para a sua transformação e <span class="text-serene-600 italic">bem-estar emocional</span>.
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Acolhimento profissional para superar desafios como ansiedade, estresse e conflitos relacionais. Reencontre o seu equilíbrio através de uma escuta ética, empática e qualificada.
+                    </p>
+
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="agendamento.html" class="w-full sm:w-auto bg-emerald-600 text-white px-8 py-4 rounded-full font-medium hover:bg-emerald-700 transition shadow-lg hover:shadow-emerald-600/20 flex items-center justify-center gap-3 group">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Agendar via WhatsApp</span>
+                            <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition"></i>
+                        </a>
+                        <a href="sobre.html" class="w-full sm:w-auto bg-white/80 backdrop-blur text-serene-800 border border-serene-200 px-8 py-4 rounded-full font-medium hover:bg-white transition flex items-center justify-center">
+                            Conheça o Trabalho
+                        </a>
+                    </div>
+
+                    <!-- Destaques -->
+                    <div class="pt-8 grid grid-cols-3 gap-4 border-t border-serene-200/60 max-w-lg mx-auto lg:mx-0 text-center">
+                        <div>
+                            <div class="text-serene-700 font-serif text-xl sm:text-2xl font-bold">100%</div>
+                            <div class="text-xs text-gray-500">Sigilo Profissional</div>
+                        </div>
+                        <div>
+                            <div class="text-serene-700 font-serif text-xl sm:text-2xl font-bold">Online</div>
+                            <div class="text-xs text-gray-500">& Presencial</div>
+                        </div>
+                        <div>
+                            <div class="text-serene-700 font-serif text-xl sm:text-2xl font-bold">Acolhedor</div>
+                            <div class="text-xs text-gray-500">Sem Julgamentos</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna Foto (aeps_sol.jpeg) e Citação sem sobreposição -->
+                <div class="lg:col-span-5 relative flex flex-col items-center">
+                    <div class="relative w-full max-w-md">
+                        <!-- Efeitos de Fundo -->
+                        <div class="absolute -top-6 -left-6 w-32 h-32 bg-serene-200 rounded-full blur-2xl opacity-60"></div>
+                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-warm-300 rounded-full blur-2xl opacity-60"></div>
+                        
+                        <!-- Moldura da Foto sem elementos sobrepostos -->
+                        <div class="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-white">
+                            <img src="aeps_sol.jpeg" 
+                                 alt="Psicóloga Clínica Solange de Deus Mauricio Pereira" 
+                                 class="w-full h-[450px] object-cover object-center"
+                                 onerror="this.src='https://placehold.co/600x800/5a8581/ffffff?text=Dra.+Solange+de+Deus'">
+                            
+                            <div class="bg-serene-900/90 p-4 text-white text-center">
+                                <p class="font-serif text-base font-medium">Solange de Deus Mauricio Pereira</p>
+                                <p class="text-xs text-serene-200 font-light">Psicóloga Clínica | CRP 05/84980</p>
+                            </div>
+                        </div>
+
+                        <!-- Card de Citação Posicionado Abaixo da Foto -->
+                        <div class="mt-4 bg-white p-5 rounded-2xl shadow-md border border-serene-100 flex items-start gap-3">
+                            <div class="w-9 h-9 rounded-full bg-serene-100 flex-shrink-0 flex items-center justify-center text-serene-600 mt-0.5">
+                                <i class="fa-solid fa-quote-left text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-600 font-medium leading-relaxed italic">
+                                    "Expresse suas emoções e não as ignore. Antes de iniciar o tratamento, você precisa ser compreendida."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Apresentação do Consultório & Nova Imagem (como_sera_sol.png) -->
+    <section class="py-16 bg-white border-y border-serene-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Nova Imagem do Consultório (como_sera_sol.png) -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md rounded-3xl overflow-hidden shadow-xl border-4 border-serene-50">
+                        <img src="como_sera_sol.png" 
+                             alt="Como será sua primeira sessão de psicoterapia - Solange de Deus" 
+                             class="w-full h-auto object-cover"
+                             onerror="this.src='https://placehold.co/600x750/f4f7f6/5a8581?text=Sua+Primeira+Sess%C3%A3o'">
+                    </div>
+                </div>
+
+                <!-- Espaço de Texto Personalizado -->
+                <div class="lg:col-span-7">
+                    <div class="bg-serene-50/60 rounded-3xl p-8 sm:p-10 border border-serene-100 shadow-sm relative">
+                        
+                        <div class="mb-6">
+                            <span class="text-serene-600 uppercase tracking-widest text-xs font-bold">Mensagem Especial</span>
+                            <h2 class="font-serif text-2xl sm:text-3xl text-serene-900 font-semibold mt-1">
+                                O Primeiro Passo Para o Seu Bem-Estar
+                            </h2>
+                        </div>
+
+                        <!-- ESPAÇO PARA O SEU TEXTO PERSONALIZADO -->
+                        <div class="space-y-4 text-gray-600 leading-relaxed text-base text-justify sm:text-left">
+                            <p>
+                                A primeira sessão é um momento único, preparado para que você se sinta completamente acolhida e ouvida. Em um ambiente seguro e sem julgamentos, conversaremos sobre suas necessidades, dúvidas e os objetivos do acompanhamento psicológico.
+                            </p>
+                            <p>
+                                A psicoterapia é um caminho de redescoberta e fortalecimento. Cada passo dado no processo terapêutico contribui para a construção de uma vida mais consciente, leve e alinhada com os seus valores.
+                            </p>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-serene-200/60 flex items-center justify-between flex-wrap gap-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-serene-600 text-white flex items-center justify-center font-serif font-bold text-sm">
+                                    SD
+                                </div>
+                                <div>
+                                    <p class="font-serif font-semibold text-serene-900 text-sm">Solange de Deus Mauricio Pereira</p>
+                                    <p class="text-xs text-gray-500">Psicóloga Clínica | CRP 05/84980</p>
+                                </div>
+                            </div>
+
+                            <a href="agendamento.html" class="text-sm text-serene-600 font-semibold hover:text-serene-800 transition flex items-center gap-1">
+                                <span>Fazer pré-agendamento</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-serene-900 text-serene-200 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-serene-800">
+                
+                <!-- Coluna 1: Identificação Profissional -->
+                <div class="md:col-span-5 space-y-4">
+                    <h3 class="font-serif text-2xl text-white font-semibold">Solange de Deus Mauricio Pereira</h3>
+                    <p class="text-xs uppercase tracking-widest text-serene-400 font-medium"> Psicóloga Clínica</p>
+                    <p class="text-sm text-serene-300 max-w-sm leading-relaxed pt-2">
+                        Atendimento psicológico clínico especializado, pautado na ética, acolhimento humanizado e busca por qualidade de vida emocional.
+                    </p>
+                    <div class="pt-2 text-xs text-serene-400">
+                        <span>CRP: 05/84980</span> (Conselho Regional de Psicologia)
+                    </div>
+
+                    <!-- REDES SOCIAIS (INSTAGRAM & FACEBOOK) -->
+                    <div class="pt-4">
+                        <p class="text-xs uppercase tracking-wider text-serene-400 font-semibold mb-3">Redes Sociais</p>
+                        <div class="flex items-center space-x-3">
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/wsolanges/" target="_blank" rel="noopener noreferrer" 
+                               class="w-10 h-10 rounded-full bg-serene-800 hover:bg-pink-600 text-serene-200 hover:text-white flex items-center justify-center transition-all duration-300 shadow-sm"
+                               title="Siga no Instagram">
+                                <i class="fa-brands fa-instagram text-lg"></i>
+                            </a>
+
+                            <!-- Facebook -->
+                            <a href="https://www.facebook.com/SEU_USUARIO_FACEBOOK" target="_blank" rel="noopener noreferrer" 
+                               class="w-10 h-10 rounded-full bg-serene-800 hover:bg-blue-600 text-serene-200 hover:text-white flex items-center justify-center transition-all duration-300 shadow-sm"
+                               title="Siga no Facebook">
+                                <i class="fa-brands fa-facebook-f text-lg"></i>
+                            </a>
+
+                            <!-- WhatsApp -->
+                            <a href="https://wa.me/5521982771542" target="_blank" rel="noopener noreferrer" 
+                               class="w-10 h-10 rounded-full bg-serene-800 hover:bg-emerald-600 text-serene-200 hover:text-white flex items-center justify-center transition-all duration-300 shadow-sm"
+                               title="Fale no WhatsApp">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna 2: Links de Navegação -->
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="text-white font-serif font-medium text-base mb-2">Navegação</h4>
+                    <ul class="space-y-2 text-sm text-serene-300">
+                        <li><a href="index.html" class="hover:text-white transition">Início</a></li>
+                        <li><a href="sobre.html" class="hover:text-white transition">Sobre Mim</a></li>
+                        <li><a href="especialidades.html" class="hover:text-white transition">Especialidades</a></li>
+                        <li><a href="como-funciona.html" class="hover:text-white transition">Como Funciona</a></li>
+                        <li><a href="faq.html" class="hover:text-white transition">FAQ</a></li>
+                        <li><a href="agendamento.html" class="hover:text-white transition">Agendamento</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Contatos e Endereço -->
+                <div class="md:col-span-4 space-y-3">
+                    <h4 class="text-white font-serif font-medium text-base mb-2">Contato & Atendimento</h4>
+                    <ul class="space-y-3 text-sm text-serene-300">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+                            <a href="https://wa.me/5521982771542" target="_blank" class="hover:text-white transition">(21) 98277-1542</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-regular fa-envelope text-serene-400"></i>
+                            <a href="mailto:soldedeus2018@gmail.com" class="hover:text-white transition">soldedeus2018@gmail.com</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-serene-400 mt-1"></i>
+                            <span>Consultório Presencial & Atendimento Online para todo o Brasil e exterior</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Direitos Autorais -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-serene-400 gap-4">
+                <p>&copy; 2026 Solange de Deus Mauricio Pereira. Todos os direitos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white transition">Política de Privacidade</a>
+                    <a href="#" class="hover:text-white transition">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Menu Mobile Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
